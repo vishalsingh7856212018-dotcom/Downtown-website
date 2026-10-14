@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Down Town Cafe & Celebrations — Robertsganj | Artisanal Dining & Private Events</title>
+  <meta name="description" content="Robertsganj's premier destination for artisanal coffee, handcrafted continental delicacies, woodfired pizzas, sizzling platters, and unforgettable birthday celebrations." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuApyr1SwPtSjrQcU6iDQEWIXwCqvKiOdBM2UezNo2Ln8gzWkODT-5N6v60Do-inb7IEuKN3bqJyjCE3JYdmDSxS9OoVDdlboadoHLySk0S1T9ZugXGjJykr7QM5quqhonAPK4qqKNKyVk8nGuV64R6yNDZOK6qE7qd8a2Ww2HvrqAS17mf50JJgCCw5bWfClhcPi5XFwirHlOgFBhraXB0BiUisf02zz0J_FuaHqmjQfX7AGLL2Qhhob7tbyOIbavtL" />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + DM Sans + Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            surface: {
+              DEFAULT: '#041710',
+              deep: '#081c14',
+              forest: '#0d241b',
+              moss: '#143126',
+              elevated: '#1b3d30',
+              container: '#10231c',
+              border: 'rgba(212, 175, 55, 0.16)'
+            },
+            gold: {
+              light: '#f7e7b4',
+              DEFAULT: '#d4af37',
+              burnished: '#c59f2a',
+              amber: '#e5a93c',
+              glow: '#f2ca50'
+            },
+            ivory: {
+              DEFAULT: '#fbf9f4',
+              muted: '#dcd7cd',
+              stone: '#9aa39d'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"DM Sans"', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom Classic Styling & Atmosphere */
+    :root {
+      --gold-primary: #d4af37;
+      --gold-glow: #f2ca50;
+      --bg-dark: #041710;
+    }
+
+    body {
+      background-color: #041710;
+      color: #fbf9f4;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      selection-background-color: #d4af37;
+      selection-color: #041710;
+    }
+
+    ::selection {
+      background: #d4af37;
+      color: #041710;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #041710;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1b3d30;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+
+    /* Ambient Gold Shimmer Border */
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.15);
+    }
+
+    .gold-border-glow:hover {
+      border-color: rgba(242, 202, 80, 0.6);
+      box-shadow: 0 0 28px -2px rgba(212, 175, 55, 0.3);
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg, rgba(16, 35, 28, 0.82) 0%, rgba(8, 28, 20, 0.92) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    /* Hero Plate Floating Lighting */
+    .plate-glow {
+      box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.9), 0 0 40px -5px rgba(212, 175, 55, 0.22);
+    }
+
+    /* Shimmering Button */
+    .btn-gold {
+      background: linear-gradient(135deg, #f2ca50 0%, #d4af37 50%, #b88f20 100%);
+      color: #1a1500;
+      font-weight: 600;
+      box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #fff0ba 0%, #f2ca50 50%, #d4af37 100%);
+      box-shadow: 0 8px 30px 0 rgba(212, 175, 55, 0.55);
+      transform: translateY(-2px);
+    }
+
+    /* Canvas Particle Background */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.65;
+    }
+
+    /* Modal Backdrop */
+    .modal-active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+    }
+  </style>
+</head>
+<body class="bg-surface text-ivory relative antialiased">
+
+  <!-- Interactive Canvas for Floating Candlelit Gold Bokeh & Warm Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- TOP ANNOUNCEMENT & CONTACT STRIP -->
+  <div class="relative z-40 bg-surface-deep/95 border-b border-gold/15 py-2 px-4 lg:px-8 text-xs text-ivory-stone tracking-wider">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 text-gold-light font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          OPEN TODAY: 11:00 AM – 11:00 PM
+        </span>
+        <span class="hidden md:inline text-gold/30">|</span>
+        <span class="hidden md:flex items-center gap-1 text-ivory-muted hover:text-gold transition-colors">
+          <span class="material-symbols-outlined text-[15px] text-gold">location_on</span>
+          Basement RK Plaza, In front of Imarti Colony, Robertsganj
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:09196363236" class="flex items-center gap-1 text-ivory-muted hover:text-gold transition-colors">
+          <span class="material-symbols-outlined text-[15px] text-gold">call</span>
+          <span>09196363236</span>
+        </a>
+        <span class="text-gold/30">|</span>
+        <a href="https://instagram.com/downtowncaferobertsganj" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-ivory-muted hover:text-gold transition-colors">
+          <span class="material-symbols-outlined text-[15px] text-gold">photo_camera</span>
+          <span>@downtowncaferobertsganj</span>
+        </a>
+        <span class="text-gold/30">|</span>
+        <button id="ambience-btn" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-moss text-gold hover:bg-gold hover:text-surface-deep transition-all" title="Toggle Cafe Lounge Ambient Chime">
+          <span class="material-symbols-outlined text-[14px]" id="ambience-icon">music_note</span>
+          <span id="ambience-text">Cafe Ambience</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER (Glassmorphic & Sticky) -->
+  <header class="sticky top-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-gold/15 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-gold to-gold-amber group-hover:scale-105 transition-transform duration-300">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuApyr1SwPtSjrQcU6iDQEWIXwCqvKiOdBM2UezNo2Ln8gzWkODT-5N6v60Do-inb7IEuKN3bqJyjCE3JYdmDSxS9OoVDdlboadoHLySk0S1T9ZugXGjJykr7QM5quqhonAPK4qqKNKyVk8nGuV64R6yNDZOK6qE7qd8a2Ww2HvrqAS17mf50JJgCCw5bWfClhcPi5XFwirHlOgFBhraXB0BiUisf02zz0J_FuaHqmjQfX7AGLL2Qhhob7tbyOIbavtL" 
+               alt="Down Town Cafe Logo" 
+               class="w-full h-full object-cover rounded-full bg-surface-deep" />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-ivory group-hover:text-gold transition-colors leading-none">Down Town Cafe</span>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-gold font-semibold pt-1">Robertsganj &bull; Celebrations</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+        <a href="#hero" class="nav-link text-ivory hover:text-gold transition-colors py-1 relative">Home</a>
+        <a href="#signature-menu" class="nav-link text-ivory-muted hover:text-gold transition-colors py-1 relative">Menu &amp; Flavors</a>
+        <a href="#birthday-parties" class="nav-link text-ivory-muted hover:text-gold transition-colors py-1 relative">Birthday &amp; Parties</a>
+        <a href="#party-planner" class="nav-link text-ivory-muted hover:text-gold transition-colors py-1 relative">Event Planner</a>
+        <a href="#owners-story" class="nav-link text-ivory-muted hover:text-gold transition-colors py-1 relative">Our Story</a>
+        <a href="#quick-reserve" class="nav-link text-ivory-muted hover:text-gold transition-colors py-1 relative">Reserve &amp; Visit</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/919196363236?text=Hi%20Down%20Town%20Cafe%2C%20I%20would%20like%20to%20inquire%20about%20table%20reservation%20%2F%20party%20booking" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="p-2.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 hover:text-white hover:bg-emerald-600 transition-all" 
+           title="Chat on WhatsApp">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="#quick-reserve" class="btn-gold px-5 py-2.5 rounded-lg text-xs uppercase tracking-widest flex items-center gap-2 shadow-lg">
+          <span class="material-symbols-outlined text-[18px]">event_seat</span>
+          <span>Book Celebration</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-ivory hover:text-gold focus:outline-none" aria-label="Toggle Navigation Menu">
+        <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="lg:hidden hidden bg-surface-deep/98 border-b border-gold/20 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-base font-medium">
+        <a href="#hero" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Home</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        <a href="#signature-menu" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Signature Menu</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        <a href="#birthday-parties" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Birthday &amp; Celebrations</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        <a href="#party-planner" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Celebration Planner Calculator</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        <a href="#owners-story" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Our Story &amp; Founders</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        <a href="#quick-reserve" class="mobile-link text-ivory hover:text-gold py-2 border-b border-surface-moss flex items-center justify-between">
+          <span>Reserve Table &amp; Contact</span>
+          <span class="material-symbols-outlined text-gold text-sm">chevron_right</span>
+        </a>
+        
+        <div class="pt-4 flex flex-col gap-3">
+          <a href="#quick-reserve" class="btn-gold w-full text-center py-3 rounded-lg text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px]">cake</span>
+            Book Birthday / Table
+          </a>
+          <a href="https://wa.me/919196363236?text=Hello%20Down%20Town%20Cafe%20Robertsganj" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2.5 rounded-lg bg-emerald-900/60 border border-emerald-500/30 text-emerald-300 text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+            <span>WhatsApp Quick Connect</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- HERO SECTION: Atmospheric Botanical Velvet & Floating Plating -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-12 pt-12 pb-20">
+      
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-emerald-900/30 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/3 -right-24 w-[500px] h-[500px] rounded-full bg-gold/15 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        
+        <!-- Left Hero Column: Brand Narrative & Key CTAs -->
+        <div class="lg:col-span-7 flex flex-col gap-6 text-left">
+          
+          <!-- Sanctuary Badge -->
+          <div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-surface-moss/90 border border-gold/30 text-gold-light text-xs font-semibold tracking-widest uppercase shadow-md backdrop-blur-sm">
+            <span class="material-symbols-outlined text-[16px] text-gold">auto_awesome</span>
+            <span>Robertsganj's Finest Culinary Sanctuary</span>
+          </div>
+
+          <!-- Monumental Headline -->
+          <div class="flex flex-col gap-3">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-[64px] font-normal tracking-tight text-ivory leading-[1.12]">
+              A Symphony of Flavor &amp; <span class="italic text-gold font-serif drop-shadow-[0_2px_15px_rgba(212,175,55,0.4)]">Unforgettable</span> Celebrations
+            </h1>
+            <p class="text-base sm:text-lg text-ivory-muted max-w-xl font-light leading-relaxed pt-2">
+              Robertsganj's premier destination for artisanal coffee, handcrafted continental delicacies, woodfired pizzas, and joyous private gatherings in a warm, candlelit botanical alcove.
+            </p>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#birthday-parties" class="btn-gold px-7 py-3.5 rounded-lg text-xs uppercase tracking-widest flex items-center gap-2 shadow-xl hover:scale-105 transition-all">
+              <span class="material-symbols-outlined text-[20px]">cake</span>
+              <span>Book Birthday Party</span>
+            </a>
+            <a href="#signature-menu" class="px-7 py-3.5 rounded-lg bg-surface-moss/80 hover:bg-surface-elevated text-ivory hover:text-gold border border-gold/25 text-xs uppercase tracking-widest flex items-center gap-2 transition-all shadow-md">
+              <span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+              <span>Explore Menu</span>
+            </a>
+          </div>
+
+          <!-- Quick Contacts Information Card -->
+          <div class="mt-4 p-4 sm:p-5 rounded-2xl glass-card grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-[22px] shrink-0">location_on</span>
+              <div class="flex flex-col">
+                <span class="uppercase text-gold font-semibold tracking-wider text-[10px]">Location</span>
+                <span class="text-ivory font-medium leading-tight">Basement RK Plaza, Robertsganj</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-[22px] shrink-0">call</span>
+              <div class="flex flex-col">
+                <span class="uppercase text-gold font-semibold tracking-wider text-[10px]">Phone Inquiry</span>
+                <a href="tel:09196363236" class="text-ivory font-medium hover:text-gold transition-colors">09196363236</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-[22px] shrink-0">schedule</span>
+              <div class="flex flex-col">
+                <span class="uppercase text-gold font-semibold tracking-wider text-[10px]">Opening Hours</span>
+                <span class="text-ivory font-medium">11:00 AM – 11:00 PM Daily</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-[22px] shrink-0">photo_camera</span>
+              <div class="flex flex-col">
+                <span class="uppercase text-gold font-semibold tracking-wider text-[10px]">Official Instagram</span>
+                <a href="https://instagram.com/downtowncaferobertsganj" target="_blank" rel="noopener noreferrer" class="text-gold font-medium hover:underline truncate">@downtowncaferobertsganj</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right Hero Column: Editorial Plating Showcase with 3D Float -->
+        <div class="lg:col-span-5 relative flex items-center justify-center lg:justify-end">
+          
+          <div class="relative w-full max-w-[420px] sm:max-w-[460px] aspect-square rounded-full p-4 sm:p-5 bg-gradient-to-tr from-surface-forest via-surface-moss to-gold/20 plate-glow flex items-center justify-center animate-float">
+            
+            <!-- Outer Gold Ring -->
+            <div class="absolute inset-1 rounded-full border border-gold/30 pointer-events-none"></div>
+            
+            <!-- Circular High-res Plating Photography -->
+            <div class="w-full h-full rounded-full overflow-hidden relative shadow-2xl group cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuARLNiCxsfLuQ3Rb_ScIFD2JjaZw0lJHypVCMxZlPR-GXKHI_baDP3gFU4KhEjvnz_htnJ7aChr15Qv0jZ-oQpaHuglw64UQ-TFORmY3akl-l36Qe4vmlOWwPcY-59sWrGSceezCqE_SO74L03Eby-0uuiGc2FCuN4RY2UmQ5wvBYcdiFna2Nc6Bu1mU48qmn6EB8VCLM6EYqRt2ciAh3UdHBdcNeO8vjdc2uh2Vd3PLR0VLAL3jQk', 'Overhead flat lay of an artisanal fine-dining bowl with golden egg yolk, fresh greens and continental infusions')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuARLNiCxsfLuQ3Rb_ScIFD2JjaZw0lJHypVCMxZlPR-GXKHI_baDP3gFU4KhEjvnz_htnJ7aChr15Qv0jZ-oQpaHuglw64UQ-TFORmY3akl-l36Qe4vmlOWwPcY-59sWrGSceezCqE_SO74L03Eby-0uuiGc2FCuN4RY2UmQ5wvBYcdiFna2Nc6Bu1mU48qmn6EB8VCLM6EYqRt2ciAh3UdHBdcNeO8vjdc2uh2Vd3PLR0VLAL3jQk" 
+                   alt="Artisanal Continental Bowl" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-forest/70 via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Top Rating Badge -->
+            <div class="absolute top-2 -right-2 sm:-right-4 bg-surface-deep/95 border border-gold/40 px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-md">
+              <span class="material-symbols-outlined text-gold text-[18px]">star</span>
+              <span class="text-xs font-semibold text-ivory tracking-wide">4.9/5 Robertsganj Favorite</span>
+            </div>
+
+            <!-- Floating Bottom Chef Signature Badge -->
+            <div class="absolute -bottom-3 -left-3 sm:-left-6 bg-surface-deep/95 border border-gold/40 p-3 sm:p-4 rounded-xl shadow-2xl flex items-center gap-3 backdrop-blur-md">
+              <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">
+                <span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Chef's Signature</span>
+                <span class="text-sm font-serif font-semibold text-ivory">Continental Infusions</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- HIGHLIGHT STATS TICKER & EXPERIENCE METRICS -->
+    <section class="w-full bg-surface-deep border-y border-gold/15 py-10 px-4 sm:px-6 lg:px-12 relative">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="flex items-center gap-4 p-2 group">
+          <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold group-hover:scale-110 transition-transform">60+</span>
+          <div class="flex flex-col">
+            <span class="text-sm sm:text-base font-semibold text-ivory">Guest Capacity</span>
+            <span class="text-xs text-ivory-stone">VIP private floor setup</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-2 group">
+          <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold group-hover:scale-110 transition-transform">100%</span>
+          <div class="flex flex-col">
+            <span class="text-sm sm:text-base font-semibold text-ivory">Custom Themes</span>
+            <span class="text-xs text-ivory-stone">Balloons, neon &amp; florals</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-2 group">
+          <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold group-hover:scale-110 transition-transform">45+</span>
+          <div class="flex flex-col">
+            <span class="text-sm sm:text-base font-semibold text-ivory">Gourmet Recipes</span>
+            <span class="text-xs text-ivory-stone">Handcrafted daily</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-2 group">
+          <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gold group-hover:scale-110 transition-transform">1200+</span>
+          <div class="flex flex-col">
+            <span class="text-sm sm:text-base font-semibold text-ivory">Celebrations Hosted</span>
+            <span class="text-xs text-ivory-stone">Memories woven in gold</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SIGNATURE MENU & FLAVORS SECTION -->
+    <section id="signature-menu" class="w-full bg-surface px-4 sm:px-6 lg:px-12 py-24 relative">
+      <div class="max-w-7xl mx-auto flex flex-col gap-12">
+        
+        <!-- Section Header & Filter Tabs -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="flex flex-col gap-2 max-w-xl">
+            <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold flex items-center gap-2">
+              <span class="w-6 h-[1.5px] bg-gold"></span>
+              The Art of Plating
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-ivory">Signature Menu &amp; Flavors</h2>
+            <p class="text-sm sm:text-base text-ivory-stone font-light leading-relaxed">
+              Each creation is an exquisite harmony of locally-sourced ingredients, robust seasonings, and continental craftsmanship designed for slow conversations.
+            </p>
+          </div>
+
+          <!-- Dynamic Filter Category Buttons -->
+          <div class="flex flex-wrap items-center gap-2 bg-surface-deep p-1.5 rounded-full border border-gold/20 self-start">
+            <button onclick="filterMenu('all')" class="menu-tab-btn active px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-gold text-surface-deep transition-all">All Items</button>
+            <button onclick="filterMenu('sizzler')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-ivory-stone hover:text-gold transition-all">Sizzlers</button>
+            <button onclick="filterMenu('pizza')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-ivory-stone hover:text-gold transition-all">Woodfired Pizza</button>
+            <button onclick="filterMenu('pasta')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-ivory-stone hover:text-gold transition-all">Risotto &amp; Pasta</button>
+            <button onclick="filterMenu('beverage')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-ivory-stone hover:text-gold transition-all">Mocktails &amp; Brews</button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="menu-grid">
+          
+          <!-- Dish 1: Risotto -->
+          <div class="menu-card group flex flex-col bg-surface-deep rounded-2xl overflow-hidden glass-card transition-all duration-300 hover:-translate-y-2" data-category="pasta">
+            <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-moss cursor-pointer" onclick="openDishModal('Truffle Wild Mushroom Risotto', '₹340', 'Slow-simmered arborio rice, foraged forest mushrooms, finished with cold-pressed Italian white truffle oil and aged parmesan shavings.', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBQEL9BsiDCpH9w8qcViRFK6VgbOSKvCfW-sHmSKXpvqs88NpjNJMXX3XjQgstt5ttQLp03osS5OyqqBdKlsKLWbIfX8wLImTHvCD_rVp72-vHOpjUUe4_UWfyp8ibvKU6UH2-PObcEP_-g2xa4rxXr030ud3Gj0EkWRBb0mzo9QsFju1fD9i31fzWUkvRpZgsaBAJSvQmz1YnEdVyDY_3UWtoSeI-884SiMuoe5z9VCuXMKx2uSnk', 'Creamy & Earthy', 'Chef\'s Choice')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQEL9BsiDCpH9w8qcViRFK6VgbOSKvCfW-sHmSKXpvqs88NpjNJMXX3XjQgstt5ttQLp03osS5OyqqBdKlsKLWbIfX8wLImTHvCD_rVp72-vHOpjUUe4_UWfyp8ibvKU6UH2-PObcEP_-g2xa4rxXr030ud3Gj0EkWRBb0mzo9QsFju1fD9i31fzWUkvRpZgsaBAJSvQmz1YnEdVyDY_3UWtoSeI-884SiMuoe5z9VCuXMKx2uSnk" 
+                   alt="Truffle Wild Mushroom Risotto" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-moss/90 border border-gold/30 text-gold text-[10px] font-bold tracking-widest uppercase">Chef's Choice</span>
+              <span class="absolute top-3 right-3 w-3 h-3 rounded-full bg-emerald-400 border border-black shadow" title="Pure Vegetarian"></span>
+            </div>
+            <div class="p-5 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 class="font-serif text-lg font-semibold text-ivory group-hover:text-gold transition-colors">Truffle Wild Mushroom Risotto</h3>
+                  <span class="font-serif text-lg font-bold text-gold">₹340</span>
+                </div>
+                <p class="text-xs text-ivory-stone line-clamp-2 mb-4 leading-relaxed">
+                  Slow-simmered arborio rice, foraged forest mushrooms, finished with cold-pressed Italian white truffle oil and aged parmesan shavings.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-gold-light text-[11px] font-medium flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm text-gold">spa</span>
+                  Creamy &amp; Earthy
+                </span>
+                <button onclick="orderDish('Truffle Wild Mushroom Risotto')" class="text-gold hover:text-white font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                  Order <span class="text-sm">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 2: Woodfired Pizza -->
+          <div class="menu-card group flex flex-col bg-surface-deep rounded-2xl overflow-hidden glass-card transition-all duration-300 hover:-translate-y-2" data-category="pizza">
+            <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-moss cursor-pointer" onclick="openDishModal('Artisanal Woodfired Pizza', '₹380', 'Thin sourdough fermented for 48 hours, layered with San Marzano pomodoro, smoked fior di latte, and sun-dried heirloom tomatoes.', 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3O1YFMPXtH-GKbcUybL-HV0TkKPoyVVWCb09kaafC-eo9_eEMgokyVbxYQx5n3sdy_QHluD-ghneQxrSPo6_unDhTcnzgN1AWzaKBrlHDZ8ZpWhIkaqYTQk8q42P88QSnWImd_TFRwO91Z4VPl97T1lTI48JApkvrEhwdKVZLRRD9EAaF6uOj-K8Ogtwtbq46Z61S-RWEWLnHXQOjbca87BB0wmNRVybTAhlnB9PKH-99C-P_c3w', 'Hand-Stretched', 'Signature Hearth')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3O1YFMPXtH-GKbcUybL-HV0TkKPoyVVWCb09kaafC-eo9_eEMgokyVbxYQx5n3sdy_QHluD-ghneQxrSPo6_unDhTcnzgN1AWzaKBrlHDZ8ZpWhIkaqYTQk8q42P88QSnWImd_TFRwO91Z4VPl97T1lTI48JApkvrEhwdKVZLRRD9EAaF6uOj-K8Ogtwtbq46Z61S-RWEWLnHXQOjbca87BB0wmNRVybTAhlnB9PKH-99C-P_c3w" 
+                   alt="Artisanal Woodfired Pizza" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-moss/90 border border-gold/30 text-gold text-[10px] font-bold tracking-widest uppercase">Signature Hearth</span>
+              <span class="absolute top-3 right-3 w-3 h-3 rounded-full bg-emerald-400 border border-black shadow" title="Pure Vegetarian"></span>
+            </div>
+            <div class="p-5 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 class="font-serif text-lg font-semibold text-ivory group-hover:text-gold transition-colors">Artisanal Woodfired Pizza</h3>
+                  <span class="font-serif text-lg font-bold text-gold">₹380</span>
+                </div>
+                <p class="text-xs text-ivory-stone line-clamp-2 mb-4 leading-relaxed">
+                  Thin sourdough fermented for 48 hours, layered with San Marzano pomodoro, smoked fior di latte, and sun-dried tomatoes.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-gold-light text-[11px] font-medium flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm text-gold">local_pizza</span>
+                  Hand-Stretched
+                </span>
+                <button onclick="orderDish('Artisanal Woodfired Pizza')" class="text-gold hover:text-white font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                  Order <span class="text-sm">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 3: Sizzler -->
+          <div class="menu-card group flex flex-col bg-surface-deep rounded-2xl overflow-hidden glass-card transition-all duration-300 hover:-translate-y-2" data-category="sizzler">
+            <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-moss cursor-pointer" onclick="openDishModal('Downtown Exotic Sizzler', '₹420', 'Sizzling iron skillet filled with marinated grilled cottage cheese, butter-tossed baby veggies, peri-peri wedges, and smoked pepper jus.', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBpq6334kekMo57KqptpyjVs7KnzMdLQlV6kMlGrRSxuu5UyHw-90DLCTfjFf42rYGNQRsNUy0mgVyQqQTv9EHCMiIB1HtAws3JXcqMcbLB4arjwbWUKJ4Fr8dpV1EN9l0Otr6w8oHlnC3e_QUrQZO8jyxJMJ4tKAerR4AVuCjN7AtwnaVKjhw8OWXHOUgPu_pGxAx_CGztoFh_uW6z1086fEop-sCRax-6J-XlpwfPb0s9vQVjoi4', 'Smoky & Zesty', 'Crowd Sizzler')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpq6334kekMo57KqptpyjVs7KnzMdLQlV6kMlGrRSxuu5UyHw-90DLCTfjFf42rYGNQRsNUy0mgVyQqQTv9EHCMiIB1HtAws3JXcqMcbLB4arjwbWUKJ4Fr8dpV1EN9l0Otr6w8oHlnC3e_QUrQZO8jyxJMJ4tKAerR4AVuCjN7AtwnaVKjhw8OWXHOUgPu_pGxAx_CGztoFh_uW6z1086fEop-sCRax-6J-XlpwfPb0s9vQVjoi4" 
+                   alt="Downtown Exotic Sizzler" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-600/90 text-white text-[10px] font-bold tracking-widest uppercase">Crowd Sizzler</span>
+              <span class="absolute top-3 right-3 w-3 h-3 rounded-full bg-emerald-400 border border-black shadow" title="Pure Vegetarian"></span>
+            </div>
+            <div class="p-5 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 class="font-serif text-lg font-semibold text-ivory group-hover:text-gold transition-colors">Downtown Exotic Sizzler</h3>
+                  <span class="font-serif text-lg font-bold text-gold">₹420</span>
+                </div>
+                <p class="text-xs text-ivory-stone line-clamp-2 mb-4 leading-relaxed">
+                  Sizzling iron skillet filled with marinated grilled cottage cheese, butter-tossed baby veggies, peri-peri wedges, and smoked pepper jus.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-gold-light text-[11px] font-medium flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm text-gold">local_fire_department</span>
+                  Smoky &amp; Zesty
+                </span>
+                <button onclick="orderDish('Downtown Exotic Sizzler')" class="text-gold hover:text-white font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                  Order <span class="text-sm">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dish 4: Craft Mocktail -->
+          <div class="menu-card group flex flex-col bg-surface-deep rounded-2xl overflow-hidden glass-card transition-all duration-300 hover:-translate-y-2" data-category="beverage">
+            <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-moss cursor-pointer" onclick="openDishModal('Craft Mocktails & Botanical Brews', '₹220', 'Signature roasted Arabica espresso blends, saffron cold foam frappés, and effervescent passionfruit-basil botanical spritzers.', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBO3UxeudUyAXlmWslNTocnUz53cnJCm1ypRf9YaEn9iN-mOwOzfUk6onx0El8PHEdPeRlP_KDq7s3-X3blRaE9hbjqQAB7FeKJgULc9K1IfeTPle9tZ0PgdEI60NWCSxs4xEo1Nb0_TTGX9ggEGQ4MKdQjoDN3Y3-WucNC3xLyCz-sbH8O9HH8brMsl7s6wxKSBtf_s4KfNXHGBnATeKsJsXwOJalB5dSaWNHgEoPDHAPb2uh2DOA', 'Single Origin', 'Botanical Brew')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3UxeudUyAXlmWslNTocnUz53cnJCm1ypRf9YaEn9iN-mOwOzfUk6onx0El8PHEdPeRlP_KDq7s3-X3blRaE9hbjqQAB7FeKJgULc9K1IfeTPle9tZ0PgdEI60NWCSxs4xEo1Nb0_TTGX9ggEGQ4MKdQjoDN3Y3-WucNC3xLyCz-sbH8O9HH8brMsl7s6wxKSBtf_s4KfNXHGBnATeKsJsXwOJalB5dSaWNHgEoPDHAPb2uh2DOA" 
+                   alt="Craft Mocktails & Brews" 
+                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-surface-moss/90 border border-gold/30 text-gold text-[10px] font-bold tracking-widest uppercase">Botanical Brew</span>
+              <span class="absolute top-3 right-3 w-3 h-3 rounded-full bg-emerald-400 border border-black shadow" title="Pure Vegetarian"></span>
+            </div>
+            <div class="p-5 flex flex-col justify-between flex-1">
+              <div>
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 class="font-serif text-lg font-semibold text-ivory group-hover:text-gold transition-colors">Craft Mocktails &amp; Brews</h3>
+                  <span class="font-serif text-lg font-bold text-gold">₹220</span>
+                </div>
+                <p class="text-xs text-ivory-stone line-clamp-2 mb-4 leading-relaxed">
+                  Signature roasted Arabica espresso blends, saffron cold foam frappés, and effervescent passionfruit-basil botanical spritzers.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-gold-light text-[11px] font-medium flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm text-gold">local_bar</span>
+                  Single Origin
+                </span>
+                <button onclick="orderDish('Craft Mocktails & Brews')" class="text-gold hover:text-white font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                  Order <span class="text-sm">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FEATURED SPLIT: PREPARED FRESH UPON ORDER -->
+        <div class="mt-8 rounded-3xl glass-card overflow-hidden p-6 sm:p-8 lg:p-10 border border-gold/25">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-deep group cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBS6VjOaXsiap4TxQ4JimwtfwsOtGlJM2mDyh1JCpFM0LY_UA01G-pKlA1niUJV3qifU1ZlqS-chZ7oaThj9nZfXFzSrVbP4wepst5dNTuGDyhHPsulVbiEu5PB7FHKZm2oqokSQfT2QCm0zPFWCirEaXkfO_p8zBMWA4weOzGb0OtIuRq5DWwXYsZjk2C9I_mxxf1ncnL4auEMHijDrApdyYrHOGg0f0RGwhsM5sHHq6mfPMYncvU', 'Freshly prepared handmade pasta and continental delicacies in ceramic bowls')">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS6VjOaXsiap4TxQ4JimwtfwsOtGlJM2mDyh1JCpFM0LY_UA01G-pKlA1niUJV3qifU1ZlqS-chZ7oaThj9nZfXFzSrVbP4wepst5dNTuGDyhHPsulVbiEu5PB7FHKZm2oqokSQfT2QCm0zPFWCirEaXkfO_p8zBMWA4weOzGb0OtIuRq5DWwXYsZjk2C9I_mxxf1ncnL4auEMHijDrApdyYrHOGg0f0RGwhsM5sHHq6mfPMYncvU" 
+                   alt="Handmade fresh pasta" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+              <span class="absolute bottom-3 left-3 text-xs uppercase tracking-widest text-gold-light font-medium bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm">
+                Kitchen Craft • Cooked to Order
+              </span>
+            </div>
+
+            <div class="lg:col-span-7 flex flex-col gap-4">
+              <span class="text-xs uppercase tracking-[0.2em] text-gold font-semibold">Handcrafted Hospitality</span>
+              <h3 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-ivory">Prepared Fresh Upon Order</h3>
+              <p class="text-sm sm:text-base text-ivory-stone leading-relaxed">
+                We reject pre-packaged sauces and rushed meals. From in-house herb infusions to slow-churned pasta reductions, Down Town Cafe is Robertsganj's ode to mindful epicurean indulgence.
+              </p>
+              
+              <div class="flex flex-wrap gap-3 pt-2">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-moss border border-gold/25 text-xs text-gold font-medium">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Authentic Sourdough
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-moss border border-gold/25 text-xs text-gold font-medium">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Fresh Pure Dairy
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-moss border border-gold/25 text-xs text-gold font-medium">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Gourmet Clean Sourcing
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BIRTHDAY PARTIES & SPECIAL CELEBRATIONS SECTION -->
+    <section id="birthday-parties" class="w-full bg-surface-deep px-4 sm:px-6 lg:px-12 py-24 relative border-t border-gold/15">
+      <div class="max-w-7xl mx-auto flex flex-col gap-14">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Milestones &amp; Moments</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory">
+            Celebrate Your Milestone at Down Town Cafe
+          </h2>
+          <p class="text-sm sm:text-base text-ivory-stone leading-relaxed">
+            Transform birthdays, anniversaries, and private reunions into unforgettable celebrations with bespoke decor, private lounges, and customized culinary spreads.
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="p-8 rounded-2xl glass-card flex flex-col justify-between hover:border-gold/50 transition-all duration-300">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
+                <span class="material-symbols-outlined text-[26px]">celebration</span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-ivory">Fairy-Light &amp; Custom Balloon Themes</h3>
+              <p class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+                Choose from elegant metallic arches, warm fairy-light photo booths, and personalized neon signage tailored to your age or theme.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold tracking-widest uppercase text-gold pt-6 mt-6 border-t border-gold/15">Turnkey Styling Included</span>
+          </div>
+
+          <div class="p-8 rounded-2xl glass-card flex flex-col justify-between hover:border-gold/50 transition-all duration-300">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
+                <span class="material-symbols-outlined text-[26px]">cake</span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-ivory">Custom Chef's Birthday Cakes</h3>
+              <p class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+                From Belgian chocolate ganache to fresh fruit gateaux, our in-house pastry chef curates personalized cakes with sparkler presentations.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold tracking-widest uppercase text-gold pt-6 mt-6 border-t border-gold/15">Artisanal Bakes</span>
+          </div>
+
+          <div class="p-8 rounded-2xl glass-card flex flex-col justify-between hover:border-gold/50 transition-all duration-300">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold">
+                <span class="material-symbols-outlined text-[26px]">set_meal</span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-ivory">Curated Finger Food Platters</h3>
+              <p class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+                All-inclusive party platters featuring loaded nachos, sliders, mocktail towers, momos, and bite-sized woodfired delicacies for all ages.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold tracking-widest uppercase text-gold pt-6 mt-6 border-t border-gold/15">Group Feasts</span>
+          </div>
+
+        </div>
+
+        <!-- DJ & Special Request Highlight Card -->
+        <div class="p-8 lg:p-10 rounded-3xl glass-card border border-gold/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold shrink-0">
+              <span class="material-symbols-outlined text-[32px]">graphic_eq</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Private Audio Zone</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-semibold text-ivory">DJ &amp; Immersive Acoustic Setup</h3>
+              <p class="text-xs text-ivory-stone leading-relaxed">
+                Connect your personal birthday playlist to our high-fidelity sound surround system or request our resident weekend DJ for high-tempo grooves.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 bg-surface-moss/70 p-6 rounded-2xl border border-gold/20">
+            <div class="flex flex-col gap-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-gold-light">Reserve Your Date Early</span>
+              <h4 class="font-serif text-lg font-semibold text-ivory">Ready to plan something extraordinary?</h4>
+              <p class="text-xs text-ivory-stone">Talk directly with our event coordinators to choose theme colors, platters, and seating layouts.</p>
+            </div>
+            <a href="#party-planner" class="btn-gold px-6 py-3 rounded-lg text-xs uppercase tracking-widest shrink-0 whitespace-nowrap shadow-lg">
+              Plan Birthday Bash
+            </a>
+          </div>
+        </div>
+
+        <!-- Testimonial Quote -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-surface-forest/60 border border-gold/15 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-4xl text-gold shrink-0">format_quote</span>
+            <div class="flex flex-col">
+              <p class="italic text-sm sm:text-base text-ivory font-serif">
+                "We hosted my daughter's 18th birthday here. The fairy-lights, customized cake, and sizzling platters were beyond perfection. Down Town Cafe is hands down Robertsganj's top celebration spot!"
+              </p>
+              <span class="text-xs text-gold font-medium mt-1">— Ananya Singhal, Robertsganj Resident</span>
+            </div>
+          </div>
+          <div class="flex items-center text-gold text-lg shrink-0">
+            ★★★★★
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE EVENT & BIRTHDAY PLANNER CALCULATOR -->
+    <section id="party-planner" class="w-full bg-surface px-4 sm:px-6 lg:px-12 py-24 relative border-t border-gold/15">
+      <div class="max-w-4xl mx-auto flex flex-col gap-8">
+        
+        <div class="text-center flex flex-col items-center gap-2">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Instant Quote &amp; Customization</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-ivory">Interactive Celebration Package Planner</h2>
+          <p class="text-xs sm:text-sm text-ivory-stone max-w-xl">
+            Customize your birthday or private party package in seconds. Estimate your budget and send directly to Shweta &amp; Gautam on WhatsApp for instant confirmation.
+          </p>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-3xl glass-card border border-gold/30 flex flex-col gap-6">
+          
+          <!-- Step 1: Event Type -->
+          <div class="flex flex-col gap-2">
+            <label class="text-xs uppercase tracking-wider text-gold font-semibold">1. Select Occasion Type</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="occasion-picker">
+              <button type="button" onclick="selectOccasion('Birthday Bash', this)" class="occasion-btn active p-3 rounded-xl border border-gold bg-gold/20 text-ivory text-xs font-medium text-center flex flex-col items-center gap-1">
+                <span class="material-symbols-outlined text-gold text-lg">cake</span>
+                <span>Birthday Bash</span>
+              </button>
+              <button type="button" onclick="selectOccasion('Anniversary / Date', this)" class="occasion-btn p-3 rounded-xl border border-gold/20 bg-surface-deep text-ivory-stone text-xs font-medium text-center flex flex-col items-center gap-1 hover:border-gold">
+                <span class="material-symbols-outlined text-gold text-lg">favorite</span>
+                <span>Anniversary</span>
+              </button>
+              <button type="button" onclick="selectOccasion('Friends Reunion', this)" class="occasion-btn p-3 rounded-xl border border-gold/20 bg-surface-deep text-ivory-stone text-xs font-medium text-center flex flex-col items-center gap-1 hover:border-gold">
+                <span class="material-symbols-outlined text-gold text-lg">groups</span>
+                <span>Friends Reunion</span>
+              </button>
+              <button type="button" onclick="selectOccasion('VIP Floor Buyout', this)" class="occasion-btn p-3 rounded-xl border border-gold/20 bg-surface-deep text-ivory-stone text-xs font-medium text-center flex flex-col items-center gap-1 hover:border-gold">
+                <span class="material-symbols-outlined text-gold text-lg">stars</span>
+                <span>Private VIP Floor</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Guest Count Slider -->
+          <div class="flex flex-col gap-2 pt-2">
+            <div class="flex justify-between items-center">
+              <label class="text-xs uppercase tracking-wider text-gold font-semibold">2. Number of Guests</label>
+              <span id="guest-count-display" class="font-serif text-lg font-bold text-gold">15 Guests</span>
+            </div>
+            <input type="range" id="guest-slider" min="4" max="60" value="15" step="1" oninput="updatePackageCalculation()" class="w-full accent-amber-400 cursor-pointer bg-surface-deep h-2 rounded-lg" />
+            <div class="flex justify-between text-[10px] text-ivory-stone">
+              <span>Intimate (4 Patrons)</span>
+              <span>Lounge (25 Patrons)</span>
+              <span>Full Floor (60 Patrons)</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Add-on Inclusions -->
+          <div class="flex flex-col gap-2 pt-2">
+            <label class="text-xs uppercase tracking-wider text-gold font-semibold">3. Curate Desired Experience Add-ons</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
+                <input type="checkbox" id addon-decor checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <div class="flex flex-col text-xs">
+                  <span class="font-semibold text-ivory">Fairy Light &amp; Balloon Backdrop Arch</span>
+                  <span class="text-ivory-stone text-[11px]">+ ₹1,200 (Custom Neon + Balloons)</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
+                <input type="checkbox" id addon-cake checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <div class="flex flex-col text-xs">
+                  <span class="font-semibold text-ivory">Chef's Custom 2-Tier Chocolate Cake</span>
+                  <span class="text-ivory-stone text-[11px]">+ ₹850 (Artisanal Belgian Truffle)</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
+                <input type="checkbox" id addon-dj onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <div class="flex flex-col text-xs">
+                  <span class="font-semibold text-ivory">Private Audio DJ Sound Setup</span>
+                  <span class="text-ivory-stone text-[11px]">+ ₹1,500 (Dedicated Sound Zone)</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
+                <input type="checkbox" id addon-mocktails checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <div class="flex flex-col text-xs">
+                  <span class="font-semibold text-ivory">Unlimited Mocktail Tower Welcome</span>
+                  <span class="text-ivory-stone text-[11px]">+ ₹150 per patron</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Total Calculation & WhatsApp Direct CTA -->
+          <div class="mt-4 p-5 rounded-2xl bg-surface-moss/80 border border-gold/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex flex-col text-center sm:text-left">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Estimated Party Package</span>
+              <div class="flex items-baseline justify-center sm:justify-start gap-2">
+                <span id="calculated-total" class="font-serif text-3xl sm:text-4xl font-bold text-gold">₹8,800</span>
+                <span class="text-xs text-ivory-stone font-light">approx. catering + decor</span>
+              </div>
+            </div>
+            <button onclick="sendPlanToWhatsApp()" class="btn-gold px-6 py-3 rounded-xl text-xs uppercase tracking-widest flex items-center gap-2 shadow-lg w-full sm:w-auto justify-center">
+              <span class="material-symbols-outlined text-[18px]">send</span>
+              <span>Send Plan on WhatsApp</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OWNERS & CULINARY HERITAGE SECTION -->
+    <section id="owners-story" class="w-full bg-surface-deep px-4 sm:px-6 lg:px-12 py-24 relative border-t border-gold/15">
+      <div class="max-w-7xl mx-auto flex flex-col gap-14">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">The Visionaries</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-ivory">
+            Crafted with Passion by Our Owners
+          </h2>
+          <p class="text-sm sm:text-base text-ivory-stone leading-relaxed">
+            Down Town Cafe is born of a shared dream to give Sonbhadra an authentic metropolitan cafe lifestyle, infused with genuine warmth and culinary distinction.
+          </p>
+        </div>
+
+        <!-- Two Owners Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto w-full">
+          
+          <!-- Shweta -->
+          <div class="p-8 rounded-3xl glass-card flex flex-col items-center text-center gap-5 hover:border-gold/40 transition-all duration-300">
+            <div class="relative w-36 h-36 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-gold to-gold-amber plate-glow">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSBnNmB5oey3XiR_BFpHumiUpQ03GjO_tLliVb1WOm6LKfjD-8u_0TMIgFfS2ISesPQu6hxEeB5Sy8yfdJ_iDttRwVgyyqxcFkJJPGqY5ZT_BXGVtrNQXm1WHZP19qNJf52tx8mh0Wxr2MCangB_pp4P6mwdCvbzwrPyhIgRH99Rjz61hZms0R-GYjUoQyA-PGd_NW24bj1YrRe6skk7iWWUv6oVKffNkUi8jhx4JIUmds_A2BfsI" 
+                   alt="Shweta — Co-Founder & Creative Director" 
+                   class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="font-serif text-2xl font-bold text-ivory">Shweta</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gold">Co-Founder &amp; Creative Director</span>
+            </div>
+            <p class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+              Curating every visual touchpoint, floral motif, and ambient atmosphere that turns casual visits into unforgettable celebrations.
+            </p>
+            <a href="https://instagram.com/itsshweta_20" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-surface-forest border border-gold/30 text-xs text-gold hover:bg-gold hover:text-surface-deep transition-all">
+              <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+              <span>@itsshweta_20</span>
+            </a>
+          </div>
+
+          <!-- Gautam Khurana -->
+          <div class="p-8 rounded-3xl glass-card flex flex-col items-center text-center gap-5 hover:border-gold/40 transition-all duration-300">
+            <div class="relative w-36 h-36 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-gold to-gold-amber plate-glow">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxJEmzI3doD5E02mEMhynv4aBkQxnlC3mjNXAFvm2RkBXFJxz527bVQJU1eiz6HUtZOg8-4x88y4nMvB9-r6eJ7OWSDe0mkdZ9WO6YdwfHGSMGJA8Q5Bi5NR3ZAJs7chIQkuHREVCgv0O4NkZreeEvaWF0YihcYuUhLkJFFHKNwC4FEW10HvyXLWg1aVOW_Gplc9zYdeFNHtzhTElRYKGlcLW1MyaFGioiEl8ecozFr7RRFMewJk" 
+                   alt="Gautam Khurana — Co-Founder & Culinary Curator" 
+                   class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="font-serif text-2xl font-bold text-ivory">Gautam Khurana</h3>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-gold">Co-Founder &amp; Culinary Curator</span>
+            </div>
+            <p class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+              Spearheading kitchen innovation, spice balances, and the high-standard gourmet hospitality that defines Robertsganj's beloved meeting place.
+            </p>
+            <a href="https://instagram.com/i_am_gautamkhurana" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-surface-forest border border-gold/30 text-xs text-gold hover:bg-gold hover:text-surface-deep transition-all">
+              <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+              <span>@i_am_gautamkhurana</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INSTAGRAM MOMENTS & COMMUNITY PHOTO MOSAIC -->
+    <section id="instagram-feed" class="w-full bg-surface px-4 sm:px-6 lg:px-12 py-24 relative border-t border-gold/15">
+      <div class="max-w-7xl mx-auto flex flex-col gap-12">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+          <div class="flex flex-col gap-2 max-w-xl">
+            <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold flex items-center gap-2">
+              <span class="material-symbols-outlined text-[16px] text-gold">photo_library</span>
+              Community &amp; Moments
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-ivory">Follow Our Journey @downtowncaferobertsganj</h2>
+            <p class="text-xs sm:text-sm text-ivory-stone">
+              From sizzling sizzler platters and pour-overs to balloon-lit 18th birthdays and candlelit dates. Tag us to be featured on our feed.
+            </p>
+          </div>
+          <a href="https://instagram.com/downtowncaferobertsganj" target="_blank" rel="noopener noreferrer" class="btn-gold px-6 py-3 rounded-lg text-xs uppercase tracking-widest flex items-center gap-2 self-start sm:self-auto shadow-md">
+            <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            <span>Follow on Instagram</span>
+          </a>
+        </div>
+
+        <!-- 6-Photo Curated Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBQEL9BsiDCpH9w8qcViRFK6VgbOSKvCfW-sHmSKXpvqs88NpjNJMXX3XjQgstt5ttQLp03osS5OyqqBdKlsKLWbIfX8wLImTHvCD_rVp72-vHOpjUUe4_UWfyp8ibvKU6UH2-PObcEP_-g2xa4rxXr030ud3Gj0EkWRBb0mzo9QsFju1fD9i31fzWUkvRpZgsaBAJSvQmz1YnEdVyDY_3UWtoSeI-884SiMuoe5z9VCuXMKx2uSnk', 'Artisanal Wild Mushroom Risotto on handcrafted ceramic')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQEL9BsiDCpH9w8qcViRFK6VgbOSKvCfW-sHmSKXpvqs88NpjNJMXX3XjQgstt5ttQLp03osS5OyqqBdKlsKLWbIfX8wLImTHvCD_rVp72-vHOpjUUe4_UWfyp8ibvKU6UH2-PObcEP_-g2xa4rxXr030ud3Gj0EkWRBb0mzo9QsFju1fD9i31fzWUkvRpZgsaBAJSvQmz1YnEdVyDY_3UWtoSeI-884SiMuoe5z9VCuXMKx2uSnk" 
+                 alt="Artisanal Risotto" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">restaurant</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#RisottoLover</span>
+            </div>
+          </div>
+
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuD3O1YFMPXtH-GKbcUybL-HV0TkKPoyVVWCb09kaafC-eo9_eEMgokyVbxYQx5n3sdy_QHluD-ghneQxrSPo6_unDhTcnzgN1AWzaKBrlHDZ8ZpWhIkaqYTQk8q42P88QSnWImd_TFRwO91Z4VPl97T1lTI48JApkvrEhwdKVZLRRD9EAaF6uOj-K8Ogtwtbq46Z61S-RWEWLnHXQOjbca87BB0wmNRVybTAhlnB9PKH-99C-P_c3w', 'Woodfired Pizza fresh from the hearth')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3O1YFMPXtH-GKbcUybL-HV0TkKPoyVVWCb09kaafC-eo9_eEMgokyVbxYQx5n3sdy_QHluD-ghneQxrSPo6_unDhTcnzgN1AWzaKBrlHDZ8ZpWhIkaqYTQk8q42P88QSnWImd_TFRwO91Z4VPl97T1lTI48JApkvrEhwdKVZLRRD9EAaF6uOj-K8Ogtwtbq46Z61S-RWEWLnHXQOjbca87BB0wmNRVybTAhlnB9PKH-99C-P_c3w" 
+                 alt="Woodfired Pizza" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">local_pizza</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#WoodfiredPizza</span>
+            </div>
+          </div>
+
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBpq6334kekMo57KqptpyjVs7KnzMdLQlV6kMlGrRSxuu5UyHw-90DLCTfjFf42rYGNQRsNUy0mgVyQqQTv9EHCMiIB1HtAws3JXcqMcbLB4arjwbWUKJ4Fr8dpV1EN9l0Otr6w8oHlnC3e_QUrQZO8jyxJMJ4tKAerR4AVuCjN7AtwnaVKjhw8OWXHOUgPu_pGxAx_CGztoFh_uW6z1086fEop-sCRax-6J-XlpwfPb0s9vQVjoi4', 'Downtown Sizzling Hot Plate with marinated cottage cheese and peri peri wedges')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpq6334kekMo57KqptpyjVs7KnzMdLQlV6kMlGrRSxuu5UyHw-90DLCTfjFf42rYGNQRsNUy0mgVyQqQTv9EHCMiIB1HtAws3JXcqMcbLB4arjwbWUKJ4Fr8dpV1EN9l0Otr6w8oHlnC3e_QUrQZO8jyxJMJ4tKAerR4AVuCjN7AtwnaVKjhw8OWXHOUgPu_pGxAx_CGztoFh_uW6z1086fEop-sCRax-6J-XlpwfPb0s9vQVjoi4" 
+                 alt="Sizzler Evenings" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">local_fire_department</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#SizzlerNight</span>
+            </div>
+          </div>
+
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBO3UxeudUyAXlmWslNTocnUz53cnJCm1ypRf9YaEn9iN-mOwOzfUk6onx0El8PHEdPeRlP_KDq7s3-X3blRaE9hbjqQAB7FeKJgULc9K1IfeTPle9tZ0PgdEI60NWCSxs4xEo1Nb0_TTGX9ggEGQ4MKdQjoDN3Y3-WucNC3xLyCz-sbH8O9HH8brMsl7s6wxKSBtf_s4KfNXHGBnATeKsJsXwOJalB5dSaWNHgEoPDHAPb2uh2DOA', 'Artisanal Cold Mocktail and Botanical Coffee Brew')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO3UxeudUyAXlmWslNTocnUz53cnJCm1ypRf9YaEn9iN-mOwOzfUk6onx0El8PHEdPeRlP_KDq7s3-X3blRaE9hbjqQAB7FeKJgULc9K1IfeTPle9tZ0PgdEI60NWCSxs4xEo1Nb0_TTGX9ggEGQ4MKdQjoDN3Y3-WucNC3xLyCz-sbH8O9HH8brMsl7s6wxKSBtf_s4KfNXHGBnATeKsJsXwOJalB5dSaWNHgEoPDHAPb2uh2DOA" 
+                 alt="Botanical Brews" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">local_cafe</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#BotanicalBrews</span>
+            </div>
+          </div>
+
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuARLNiCxsfLuQ3Rb_ScIFD2JjaZw0lJHypVCMxZlPR-GXKHI_baDP3gFU4KhEjvnz_htnJ7aChr15Qv0jZ-oQpaHuglw64UQ-TFORmY3akl-l36Qe4vmlOWwPcY-59sWrGSceezCqE_SO74L03Eby-0uuiGc2FCuN4RY2UmQ5wvBYcdiFna2Nc6Bu1mU48qmn6EB8VCLM6EYqRt2ciAh3UdHBdcNeO8vjdc2uh2Vd3PLR0VLAL3jQk', 'Celebration Platter Moment')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuARLNiCxsfLuQ3Rb_ScIFD2JjaZw0lJHypVCMxZlPR-GXKHI_baDP3gFU4KhEjvnz_htnJ7aChr15Qv0jZ-oQpaHuglw64UQ-TFORmY3akl-l36Qe4vmlOWwPcY-59sWrGSceezCqE_SO74L03Eby-0uuiGc2FCuN4RY2UmQ5wvBYcdiFna2Nc6Bu1mU48qmn6EB8VCLM6EYqRt2ciAh3UdHBdcNeO8vjdc2uh2Vd3PLR0VLAL3jQk" 
+                 alt="Celebration Moments" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">celebration</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#PartyAtDownTown</span>
+            </div>
+          </div>
+
+          <div class="group relative aspect-square rounded-2xl overflow-hidden bg-surface-deep shadow-lg cursor-pointer" onclick="openLightbox('https://lh3.googleusercontent.com/aida-public/AB6AXuBS6VjOaXsiap4TxQ4JimwtfwsOtGlJM2mDyh1JCpFM0LY_UA01G-pKlA1niUJV3qifU1ZlqS-chZ7oaThj9nZfXFzSrVbP4wepst5dNTuGDyhHPsulVbiEu5PB7FHKZm2oqokSQfT2QCm0zPFWCirEaXkfO_p8zBMWA4weOzGb0OtIuRq5DWwXYsZjk2C9I_mxxf1ncnL4auEMHijDrApdyYrHOGg0f0RGwhsM5sHHq6mfPMYncvU', 'Fresh Handmade Pastas & Ceramic Bowls')">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS6VjOaXsiap4TxQ4JimwtfwsOtGlJM2mDyh1JCpFM0LY_UA01G-pKlA1niUJV3qifU1ZlqS-chZ7oaThj9nZfXFzSrVbP4wepst5dNTuGDyhHPsulVbiEu5PB7FHKZm2oqokSQfT2QCm0zPFWCirEaXkfO_p8zBMWA4weOzGb0OtIuRq5DWwXYsZjk2C9I_mxxf1ncnL4auEMHijDrApdyYrHOGg0f0RGwhsM5sHHq6mfPMYncvU" 
+                 alt="Handcrafted Delights" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-surface/75 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-1 text-ivory p-2 text-center backdrop-blur-xs">
+              <span class="material-symbols-outlined text-gold text-2xl">award_star</span>
+              <span class="text-[10px] uppercase font-bold text-gold">#DownTownRobertsganj</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VISIT US & SMART RESERVATION SUITE -->
+    <section id="quick-reserve" class="w-full bg-surface-deep px-4 sm:px-6 lg:px-12 py-24 relative border-t border-gold/15">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Location, Map & Hours -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Find Us Easily</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-ivory">Visit Down Town Cafe</h2>
+            <p class="text-sm text-ivory-stone leading-relaxed">
+              Located in the bustling heart of Robertsganj, offering a quiet basement haven filled with cool aromas and warm candlelight.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl glass-card flex flex-col gap-4">
+            
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-2xl shrink-0 mt-0.5">location_on</span>
+              <div class="flex flex-col">
+                <span class="text-xs uppercase tracking-wider text-gold font-semibold">Physical Address</span>
+                <span class="text-sm text-ivory font-medium">Basement RK Plaza, In front of Imarti Colony, Robertsganj, Sonbhadra, Uttar Pradesh 231216</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-2xl shrink-0 mt-0.5">call</span>
+              <div class="flex flex-col">
+                <span class="text-xs uppercase tracking-wider text-gold font-semibold">Direct Table Booking</span>
+                <a href="tel:09196363236" class="text-sm text-ivory font-medium hover:text-gold transition-colors">09196363236</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-2xl shrink-0 mt-0.5">mail</span>
+              <div class="flex flex-col">
+                <span class="text-xs uppercase tracking-wider text-gold font-semibold">Email Concierge</span>
+                <a href="mailto:Downtowncaferbj@gmail.com" class="text-sm text-ivory font-medium hover:text-gold transition-colors">Downtowncaferbj@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-gold text-2xl shrink-0 mt-0.5">schedule</span>
+              <div class="flex flex-col">
+                <span class="text-xs uppercase tracking-wider text-gold font-semibold">Everyday Service Hours</span>
+                <span class="text-sm text-ivory font-medium">Monday — Sunday: 11:00 AM – 11:00 PM</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Stylized Map Card with Robertsganj Pin -->
+          <div class="rounded-2xl overflow-hidden glass-card border border-gold/30 shadow-xl group">
+            <div class="relative w-full h-48 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtMWfPEj6miFNjZspXrvYf4tmi_1GE5lQu2WuuKADOOOTcyNemONOQFrXWK05XEgygjMg9oJQNf4hoHZkMxjz-CeF9ytEQZWRxAkoMbDgivVIR3eZyDme6_ixze_9leQXSQmBBTq8T0zoFRuxOPXtD3uiRV1cCpjG83fgGJQ_gjrgn41_zYMMRbbkPIAroQRYpm1GNBPVaiuuz87sXcknzsDhHbtFidtJ1wiiACTydiotxmgqo91M')">
+              <div class="absolute inset-0 bg-surface/40 group-hover:bg-surface/20 transition-all flex items-center justify-center">
+                <a href="https://maps.google.com/?q=Basement+RK+Plaza+Robertsganj+Sonbhadra" target="_blank" rel="noopener noreferrer" class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider flex items-center gap-2 shadow-2xl">
+                  <span class="material-symbols-outlined text-[18px]">directions</span>
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
+            <div class="p-3 bg-surface-deep text-center">
+              <span class="text-[11px] text-ivory-stone">Landmark: RK Plaza Basement &bull; Opp. Imarti Colony</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Booking Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-10 rounded-3xl glass-card border border-gold/30 flex flex-col gap-6 shadow-2xl">
+            
+            <div class="flex flex-col gap-1 border-b border-gold/15 pb-4">
+              <span class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Fast Inquiries</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-ivory">Book Birthday / Table Reservation</h3>
+              <p class="text-xs text-ivory-stone">
+                Fill in your celebration details and our guest relations team will confirm via WhatsApp or call within 30 minutes.
+              </p>
+            </div>
+
+            <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="flex flex-col gap-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Your Full Name *</label>
+                  <input type="text" id="res-name" required placeholder="e.g. Rahul Sharma" class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors" />
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Phone Number *</label>
+                  <input type="tel" id="res-phone" required placeholder="e.g. 09196363236" class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors" />
+                </div>
+
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Booking Purpose</label>
+                  <select id="res-purpose" class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors cursor-pointer">
+                    <option value="Birthday Party Celebration">Birthday Party Celebration</option>
+                    <option value="Candlelit Anniversary Dinner">Candlelit Anniversary Dinner</option>
+                    <option value="Casual Dine-in Table">Casual Dine-in Table</option>
+                    <option value="Private VIP Lounge Buyout">Private VIP Lounge Buyout (15+)</option>
+                    <option value="Friends Reunion / Kitty Party">Friends Reunion / Kitty Party</option>
+                  </select>
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Expected Guests</label>
+                  <select id="res-guests" class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors cursor-pointer">
+                    <option value="2 Patrons (Cozy Table)">2 Patrons (Cozy Table)</option>
+                    <option value="3 - 5 Patrons">3 - 5 Patrons</option>
+                    <option value="6 - 10 Patrons (Celebration Booth)">6 - 10 Patrons (Celebration Booth)</option>
+                    <option value="11 - 20 Patrons (Alcove Group)">11 - 20 Patrons (Alcove Group)</option>
+                    <option value="20+ Patrons (VIP Floor Reservation)">20+ Patrons (VIP Floor Reservation)</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Date</label>
+                  <input type="date" id="res-date" required class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors" />
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Preferred Time</label>
+                  <select id="res-time" class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors cursor-pointer">
+                    <option value="Lunch Slot (12:00 PM – 3:30 PM)">Lunch Slot (12:00 PM – 3:30 PM)</option>
+                    <option value="Evening Golden Hour (4:00 PM – 6:30 PM)">Evening Golden Hour (4:00 PM – 6:30 PM)</option>
+                    <option value="Dinner Celebration (7:00 PM – 9:30 PM)">Dinner Celebration (7:00 PM – 9:30 PM)</option>
+                    <option value="Late Evening Lounge (9:30 PM – 11:00 PM)">Late Evening Lounge (9:30 PM – 11:00 PM)</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-1.5">
+                <label class="text-[11px] uppercase tracking-wider text-gold font-semibold">Custom Requests (Cake Flavor, Balloon Colors, Dietary)</label>
+                <textarea id="res-notes" rows="3" placeholder="Tell us if you want balloons, chocolate cake, specific songs, or special dietary accommodations..." class="w-full bg-surface-forest/80 border border-gold/25 focus:border-gold px-4 py-2.5 rounded-xl text-sm text-ivory focus:outline-none transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold w-full py-3.5 rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 mt-2 shadow-xl">
+                <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                <span>Confirm Reservation Request</span>
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY EDITORIAL FOOTER -->
+  <footer class="w-full bg-surface-deep border-t border-gold/20 pt-16 pb-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      
+      <!-- Brand & Mission -->
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuApyr1SwPtSjrQcU6iDQEWIXwCqvKiOdBM2UezNo2Ln8gzWkODT-5N6v60Do-inb7IEuKN3bqJyjCE3JYdmDSxS9OoVDdlboadoHLySk0S1T9ZugXGjJykr7QM5quqhonAPK4qqKNKyVk8nGuV64R6yNDZOK6qE7qd8a2Ww2HvrqAS17mf50JJgCCw5bWfClhcPi5XFwirHlOgFBhraXB0BiUisf02zz0J_FuaHqmjQfX7AGLL2Qhhob7tbyOIbavtL" 
+               alt="Down Town Cafe" 
+               class="h-10 w-10 rounded-full object-cover p-0.5 bg-gold" />
+          <span class="font-serif text-xl font-bold text-ivory">Down Town Cafe</span>
+        </div>
+        <p class="text-xs text-ivory-stone leading-relaxed">
+          Experience the signature culinary warmth and curated celebration alcoves in Robertsganj, Sonbhadra. Crafted with moody botanicals and burnished brass hospitality.
+        </p>
+        <div class="flex flex-col gap-1 pt-2">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Owners on Instagram</span>
+          <div class="flex items-center gap-3 text-xs text-ivory-muted">
+            <a href="https://instagram.com/itsshweta_20" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">@itsshweta_20</a>
+            <span class="text-gold/40">•</span>
+            <a href="https://instagram.com/i_am_gautamkhurana" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">@i_am_gautamkhurana</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Navigation -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-serif text-base font-semibold text-ivory tracking-wider uppercase">Quick Navigation</h4>
+        <ul class="flex flex-col gap-2 text-xs text-ivory-muted">
+          <li><a href="#hero" class="hover:text-gold transition-colors">Home &amp; Hero Sanctuary</a></li>
+          <li><a href="#signature-menu" class="hover:text-gold transition-colors">Menu &amp; Flavors</a></li>
+          <li><a href="#birthday-parties" class="hover:text-gold transition-colors">Birthday &amp; Private Celebrations</a></li>
+          <li><a href="#party-planner" class="hover:text-gold transition-colors">Party Package Calculator</a></li>
+          <li><a href="#owners-story" class="hover:text-gold transition-colors">Owners &amp; Culinary Heritage</a></li>
+          <li><a href="#quick-reserve" class="hover:text-gold transition-colors">Reserve a Table</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Reach -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-serif text-base font-semibold text-ivory tracking-wider uppercase">Contact &amp; Reach</h4>
+        <div class="flex flex-col gap-2.5 text-xs text-ivory-muted">
+          <p class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-gold text-[16px] shrink-0 mt-0.5">location_on</span>
+            <span>Basement RK Plaza, in front of Imarti Colony, Robertsganj, Sonbhadra, UP</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-gold text-[16px] shrink-0">call</span>
+            <a href="tel:09196363236" class="hover:text-gold transition-colors">09196363236</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-gold text-[16px] shrink-0">mail</span>
+            <a href="mailto:Downtowncaferbj@gmail.com" class="hover:text-gold transition-colors">Downtowncaferbj@gmail.com</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-gold text-[16px] shrink-0">schedule</span>
+            <span>11:00 AM – 11:00 PM Daily</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Celebrate With Us -->
+      <div class="flex flex-col gap-4">
+        <h4 class="font-serif text-base font-semibold text-ivory tracking-wider uppercase">Celebrate With Us</h4>
+        <p class="text-xs text-ivory-stone leading-relaxed">
+          Reserve candlelit dinner lounges or plan exclusive private party packages for milestone birthdays and gatherings.
+        </p>
+        <a href="#quick-reserve" class="btn-gold px-5 py-2.5 rounded-lg text-xs uppercase tracking-widest text-center shadow-lg">
+          Book Birthday / Table
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gold/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ivory-stone">
+      <p>&copy; 2025 Down Town Cafe &amp; Celebrations. All rights reserved.</p>
+      <p class="text-gold-light font-medium">Curated hospitality by Shweta &amp; Gautam Khurana</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION PILLS (WhatsApp, Call, Scroll Top) -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    
+    <!-- WhatsApp Floating Pill -->
+    <a href="https://wa.me/919196363236?text=Hi%20Down%20Town%20Cafe%2C%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20a%20party" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="w-13 h-13 p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_6px_25px_rgba(16,185,129,0.5)] flex items-center justify-center transition-all hover:scale-110 group" 
+       title="Chat with us on WhatsApp">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Scroll Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-3 rounded-full bg-surface-deep/90 border border-gold/40 text-gold hover:bg-gold hover:text-surface-deep shadow-xl flex items-center justify-center transition-all hover:scale-105" title="Back to top">
+      <span class="material-symbols-outlined text-[20px]">keyboard_arrow_up</span>
+    </button>
+  </div>
+
+  <!-- DISH DETAILS / QUICK VIEW MODAL -->
+  <div id="dish-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-4">
+    <div class="relative w-full max-w-lg bg-surface-deep rounded-3xl border border-gold/40 overflow-hidden shadow-2xl p-6 sm:p-8 flex flex-col gap-5">
+      <button onclick="closeDishModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface-moss flex items-center justify-center text-ivory hover:text-gold transition-colors">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-surface-forest">
+        <img id="dish-modal-img" src="" alt="Dish Preview" class="w-full h-full object-cover" />
+        <span id="dish-modal-badge" class="absolute top-3 left-3 px-3 py-1 rounded-md bg-surface-moss/90 border border-gold/30 text-gold text-xs font-bold uppercase tracking-wider"></span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="flex items-start justify-between gap-3">
+          <h3 id="dish-modal-title" class="font-serif text-2xl font-semibold text-ivory"></h3>
+          <span id="dish-modal-price" class="font-serif text-2xl font-bold text-gold"></span>
+        </div>
+        <p id="dish-modal-desc" class="text-sm text-ivory-stone leading-relaxed"></p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-surface-moss/70 border border-gold/20 flex items-center justify-between text-xs">
+        <div class="flex items-center gap-2 text-gold">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span id="dish-modal-notes" class="font-medium"></span>
+        </div>
+        <span class="text-emerald-400 font-semibold">100% Pure Veg</span>
+      </div>
+
+      <div class="flex items-center gap-3 pt-2">
+        <button id="dish-modal-inquire" class="btn-gold flex-1 py-3 rounded-xl text-xs uppercase tracking-widest text-center">
+          Inquire on WhatsApp
+        </button>
+        <button onclick="closeDishModal()" class="px-5 py-3 rounded-xl bg-surface-moss text-ivory-muted hover:text-white text-xs uppercase tracking-wider">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN PHOTO LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-lg opacity-0 pointer-events-none transition-all duration-300 p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full flex flex-col items-center gap-3" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-gold flex items-center gap-1 text-sm">
+        <span class="material-symbols-outlined text-2xl">close</span>
+        <span>Close</span>
+      </button>
+      <div class="rounded-2xl overflow-hidden border border-gold/30 max-h-[80vh] bg-surface-deep shadow-2xl">
+        <img id="lightbox-img" src="" alt="Expanded View" class="w-full h-full object-contain max-h-[75vh]" />
+      </div>
+      <p id="lightbox-caption" class="text-sm text-gold font-medium text-center px-4"></p>
+    </div>
+  </div>
+
+  <!-- RESERVATION CONFIRMATION SUCCESS MODAL -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 p-4">
+    <div class="relative w-full max-w-md bg-surface-deep rounded-3xl border border-gold/40 p-6 sm:p-8 text-center flex flex-col items-center gap-4 shadow-2xl">
+      <div class="w-16 h-16 rounded-full bg-emerald-900/60 border border-emerald-400/40 flex items-center justify-center text-emerald-400 mb-1">
+        <span class="material-symbols-outlined text-3xl">check_circle</span>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-ivory">Reservation Received!</h3>
+      <p id="success-summary" class="text-xs sm:text-sm text-ivory-stone leading-relaxed">
+        Thank you! Your celebration booking request has been logged. Send directly to our WhatsApp concierge for instant seat locking.
+      </p>
+      <div class="flex flex-col w-full gap-3 pt-2">
+        <a id="success-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-gold py-3.5 rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Confirm on WhatsApp Now</span>
+        </a>
+        <button onclick="closeSuccessModal()" class="py-2.5 rounded-xl bg-surface-moss text-ivory-stone hover:text-ivory text-xs uppercase tracking-wider">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: Full Interactivity, Calculator, Sound Ambience & Particles -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    const menuIcon = document.getElementById('menu-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+      menuIcon.textContent = mobileNav.classList.contains('hidden') ? 'menu' : 'close';
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      });
+    });
+
+    // 2. Menu Category Filtering
+    function filterMenu(category) {
+      document.querySelectorAll('.menu-tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-gold', 'text-surface-deep');
+        btn.classList.add('text-ivory-stone');
+      });
+      event.target.classList.add('active', 'bg-gold', 'text-surface-deep');
+      event.target.classList.remove('text-ivory-stone');
+
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Dish Quick View Modal
+    const dishModal = document.getElementById('dish-modal');
+    function openDishModal(title, price, desc, img, notes, badge) {
+      document.getElementById('dish-modal-title').textContent = title;
+      document.getElementById('dish-modal-price').textContent = price;
+      document.getElementById('dish-modal-desc').textContent = desc;
+      document.getElementById('dish-modal-img').src = img;
+      document.getElementById('dish-modal-notes').textContent = notes;
+      document.getElementById('dish-modal-badge').textContent = badge;
+      
+      const whatsappMsg = encodeURIComponent(`Hi Down Town Cafe, I would like to inquire about ordering ${title} (${price}) for dine-in / party.`);
+      document.getElementById('dish-modal-inquire').onclick = () => {
+        window.open(`https://wa.me/919196363236?text=${whatsappMsg}`, '_blank');
+      };
+
+      dishModal.classList.add('modal-active');
+    }
+    function closeDishModal() {
+      dishModal.classList.remove('modal-active');
+    }
+
+    function orderDish(dishName) {
+      const msg = encodeURIComponent(`Hi Down Town Cafe Robertsganj! I'd like to order / reserve a table with your signature ${dishName}.`);
+      window.open(`https://wa.me/919196363236?text=${msg}`, '_blank');
+    }
+
+    // 4. Photo Lightbox Modal
+    const lightboxModal = document.getElementById('lightbox-modal');
+    function openLightbox(imgSrc, caption) {
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.getElementById('lightbox-caption').textContent = caption;
+      lightboxModal.classList.add('modal-active');
+    }
+    function closeLightbox() {
+      lightboxModal.classList.remove('modal-active');
+    }
+
+    // 5. Celebration Package Calculator
+    let selectedOccasion = 'Birthday Bash';
+    function selectOccasion(type, btn) {
+      selectedOccasion = type;
+      document.querySelectorAll('.occasion-btn').forEach(b => {
+        b.classList.remove('active', 'border-gold', 'bg-gold/20');
+        b.classList.add('border-gold/20', 'bg-surface-deep');
+      });
+      btn.classList.add('active', 'border-gold', 'bg-gold/20');
+      btn.classList.remove('border-gold/20', 'bg-surface-deep');
+      updatePackageCalculation();
+    }
+
+    function updatePackageCalculation() {
+      const guests = parseInt(document.getElementById('guest-slider').value);
+      document.getElementById('guest-count-display').textContent = `${guests} Guests`;
+
+      const hasDecor = document.getElementById('addon-decor').checked;
+      const hasCake = document.getElementById('addon-cake').checked;
+      const hasDJ = document.getElementById('addon-dj').checked;
+      const hasMocktails = document.getElementById('addon-mocktails').checked;
+
+      // Base catering estimate ~₹380 per head
+      let total = guests * 380;
+      if (hasDecor) total += 1200;
+      if (hasCake) total += 850;
+      if (hasDJ) total += 1500;
+      if (hasMocktails) total += (guests * 150);
+
+      document.getElementById('calculated-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+    }
+
+    function sendPlanToWhatsApp() {
+      const guests = document.getElementById('guest-slider').value;
+      const total = document.getElementById('calculated-total').textContent;
+      const hasDecor = document.getElementById('addon-decor').checked ? 'Yes' : 'No';
+      const hasCake = document.getElementById('addon-cake').checked ? 'Yes' : 'No';
+      const hasDJ = document.getElementById('addon-dj').checked ? 'Yes' : 'No';
+      const hasMocktails = document.getElementById('addon-mocktails').checked ? 'Yes' : 'No';
+
+      const text = `🎉 *Down Town Cafe - Celebration Plan Request*
+Occasion: ${selectedOccasion}
+Guests: ${guests} Patrons
+Balloon Arch & Decor: ${hasDecor}
+Artisanal Cake: ${hasCake}
+Sound & DJ Setup: ${hasDJ}
+Mocktail Welcome: ${hasMocktails}
+Estimated Budget: ${total}
+
+Kindly confirm availability and package details.`;
+
+      window.open(`https://wa.me/919196363236?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // 6. Reservation Form Handler
+    const successModal = document.getElementById('success-modal');
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value;
+      const phone = document.getElementById('res-phone').value;
+      const purpose = document.getElementById('res-purpose').value;
+      const guests = document.getElementById('res-guests').value;
+      const date = document.getElementById('res-date').value;
+      const time = document.getElementById('res-time').value;
+      const notes = document.getElementById('res-notes').value || 'None';
+
+      const msg = `🍽️ *Table / Party Booking Request — Down Town Cafe*
+Name: ${name}
+Phone: ${phone}
+Purpose: ${purpose}
+Guests: ${guests}
+Date: ${date}
+Time Slot: ${time}
+Custom Requests: ${notes}`;
+
+      const waLink = `https://wa.me/919196363236?text=${encodeURIComponent(msg)}`;
+      document.getElementById('success-whatsapp-link').href = waLink;
+      document.getElementById('success-summary').textContent = `Reservation for ${name} (${guests}) on ${date} at ${time} recorded! Click below to send directly to WhatsApp.`;
+      
+      successModal.classList.add('modal-active');
+    }
+
+    function closeSuccessModal() {
+      successModal.classList.remove('modal-active');
+      document.getElementById('reservation-form').reset();
+    }
+
+    // Pre-fill today's date in reservation
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('res-date').min = today;
+    document.getElementById('res-date').value = today;
+
+    // 7. Ambient Cafe Sound Generator (Web Audio API - Binaural relaxing cafe chords)
+    let audioCtx = null;
+    let isPlayingAmbience = false;
+    let ambienceInterval = null;
+
+    const ambienceBtn = document.getElementById('ambience-btn');
+    const ambienceIcon = document.getElementById('ambience-icon');
+    const ambienceText = document.getElementById('ambience-text');
+
+    ambienceBtn.addEventListener('click', () => {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+
+      if (!isPlayingAmbience) {
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        playAmbientChord();
+        ambienceInterval = setInterval(playAmbientChord, 4000);
+        isPlayingAmbience = true;
+        ambienceIcon.textContent = 'volume_up';
+        ambienceText.textContent = 'Ambience On';
+        ambienceBtn.classList.add('bg-gold', 'text-surface-deep');
+      } else {
+        clearInterval(ambienceInterval);
+        isPlayingAmbience = false;
+        ambienceIcon.textContent = 'music_note';
+        ambienceText.textContent = 'Cafe Ambience';
+        ambienceBtn.classList.remove('bg-gold', 'text-surface-deep');
+      }
+    });
+
+    function playAmbientChord() {
+      if (!audioCtx) return;
+      // Gentle minor 9th warm lounge chord: F, Ab, C, Eb, G
+      const freqs = [174.61, 207.65, 261.63, 311.13, 392.00];
+      freqs.forEach((f, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+
+        const now = audioCtx.currentTime;
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(0.012 / (i + 1), now + 1.2);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.8);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 4);
+      });
+    }
+
+    // 8. Floating Golden Particles Canvas
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const particles = Array.from({ length: 32 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 2.2 + 0.6,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: -Math.random() * 0.5 - 0.2,
+      alpha: Math.random() * 0.6 + 0.2
+    }));
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < 0) p.y = height;
+        if (p.x < 0) p.x = width;
+        if (p.x > width) p.x = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(242, 202, 80, ${p.alpha})`;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = 'rgba(212, 175, 55, 0.8)';
+        ctx.fill();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+
+</body>
+</html>
