@@ -181,6 +181,60 @@
       visibility: visible !important;
       pointer-events: auto !important;
     }
+
+    /* Android / small-screen layout improvements */
+    html { width: 100%; overflow-x: clip; }
+    body { width: 100%; min-width: 0; overflow-x: clip; }
+    img, video, canvas, iframe { max-width: 100%; }
+    button, a, input, select, textarea { touch-action: manipulation; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    input, select, textarea { font-size: 16px; } /* prevents Android/iOS browser zoom on form focus */
+    section[id] { scroll-margin-top: 88px; }
+    #particles-canvas { height: 100dvh; }
+    @media (max-width: 767px) {
+      .max-w-7xl { max-width: 100%; }
+      #main-header .max-w-7xl { min-height: 68px; height: auto; padding-top: 10px; padding-bottom: 10px; gap: 10px; }
+      #main-header a[href="#hero"] { min-width: 0; gap: 8px; }
+      #main-header a[href="#hero"] > div:first-child { width: 40px; height: 40px; flex: 0 0 40px; }
+      #main-header a[href="#hero"] .font-serif { font-size: clamp(15px, 4.2vw, 20px); letter-spacing: .01em; }
+      #main-header a[href="#hero"] .tracking-\[0\.25em\] { font-size: 8px; letter-spacing: .12em; }
+      #mobile-nav { max-height: calc(100dvh - 68px); overflow-y: auto; padding-left: 18px; padding-right: 18px; }
+      body > div.relative.z-40 { padding: 8px 12px; }
+      body > div.relative.z-40 > div { gap: 8px; }
+      body > div.relative.z-40 > div > div:last-child { flex-wrap: wrap; justify-content: center; gap: 8px 12px; }
+      body > div.relative.z-40 a[href^="https://instagram.com"] span:last-child { overflow-wrap: anywhere; }
+      #hero { min-height: auto; padding: 44px 16px 56px; }
+      #hero h1 { font-size: clamp(2.1rem, 9vw, 3.25rem); line-height: 1.12; overflow-wrap: anywhere; }
+      #hero .inline-flex { max-width: 100%; }
+      #hero .flex.flex-wrap.items-center.gap-4 > a { width: 100%; justify-content: center; text-align: center; }
+      main section { padding-left: 16px; padding-right: 16px; }
+      main section h2 { overflow-wrap: anywhere; }
+      main .grid { min-width: 0; }
+      .glass-card, .gold-border-glow { min-width: 0; }
+      #dish-modal > div { max-height: calc(100dvh - 24px); overflow-y: auto; padding: 20px; border-radius: 20px; }
+      #dish-modal .flex.items-center.gap-3.pt-2 { flex-direction: column; }
+      #dish-modal .flex.items-center.gap-3.pt-2 > button { width: 100%; }
+      #success-modal > div { max-height: calc(100dvh - 24px); overflow-y: auto; padding: 22px; }
+      #lightbox-modal { padding: 12px; }
+      #lightbox-modal img { max-height: 68dvh; }
+      #lightbox-modal button { top: -42px; }
+      input, select, textarea { max-width: 100%; }
+      #guest-number-input { width: 84px; }
+      .fixed.bottom-6, .fixed.bottom-5 { bottom: max(12px, env(safe-area-inset-bottom)); }
+      #particles-canvas { opacity: .22; }
+      .btn-gold:hover { transform: none; }
+    }
+    @media (max-width: 380px) {
+      #main-header .max-w-7xl { padding-left: 10px; padding-right: 10px; }
+      #main-header a[href="#hero"] .font-serif { font-size: 14px; }
+      #main-header a[href="#hero"] .tracking-\[0\.25em\] { font-size: 7px; }
+      #hero h1 { font-size: 2rem; }
+      main section { padding-left: 12px; padding-right: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+
   </style>
 </head>
 <body class="bg-surface text-ivory relative antialiased">
@@ -1404,8 +1458,12 @@
         btn.classList.remove('active', 'bg-gold', 'text-surface-deep');
         btn.classList.add('text-ivory-stone');
       });
-      event.target.classList.add('active', 'bg-gold', 'text-surface-deep');
-      event.target.classList.remove('text-ivory-stone');
+      const activeButton = document.querySelector(`.menu-tab-btn[onclick*="filterMenu('${category}'"]`) ||
+        Array.from(document.querySelectorAll('.menu-tab-btn')).find(btn => btn.textContent.trim().toLowerCase() === category.toLowerCase());
+      if (activeButton) {
+        activeButton.classList.add('active', 'bg-gold', 'text-surface-deep');
+        activeButton.classList.remove('text-ivory-stone');
+      }
 
       const cards = document.querySelectorAll('.menu-card');
       cards.forEach(card => {
@@ -1594,7 +1652,8 @@ Custom Requests: ${notes}`;
     }
 
     // Pre-fill today's date in reservation
-    const today = new Date().toISOString().split('T')[0];
+    const localNow = new Date();
+    const today = `${localNow.getFullYear()}-${String(localNow.getMonth() + 1).padStart(2, '0')}-${String(localNow.getDate()).padStart(2, '0')}`;
     document.getElementById('res-date').min = today;
     document.getElementById('res-date').value = today;
 
