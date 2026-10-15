@@ -812,17 +812,24 @@
             </div>
           </div>
 
-          <!-- Step 2: Guest Count Slider -->
-          <div class="flex flex-col gap-2 pt-2">
-            <div class="flex justify-between items-center">
-              <label class="text-xs uppercase tracking-wider text-gold font-semibold">2. Number of Guests</label>
-              <span id="guest-count-display" class="font-serif text-lg font-bold text-gold">15 Guests</span>
+          <!-- Step 2: Guest Count Slider & Direct Input -->
+          <div class="flex flex-col gap-3 pt-2">
+            <div class="flex flex-wrap justify-between items-center gap-2">
+              <label for="guest-number-input" class="text-xs uppercase tracking-wider text-gold font-semibold">
+                2. Number of Guests (₹580 / Person Base)
+              </label>
+              <div class="flex items-center gap-2 bg-surface-deep px-3 py-1.5 rounded-xl border border-gold/30">
+                <button type="button" onclick="adjustGuests(-1)" class="w-7 h-7 rounded-lg bg-surface-moss text-gold hover:bg-gold hover:text-surface-deep font-bold flex items-center justify-center transition-colors text-base" title="Decrease guests">−</button>
+                <input type="number" id="guest-number-input" min="1" max="150" value="15" oninput="onGuestNumberInput(this.value)" class="w-14 bg-transparent text-center font-serif text-lg font-bold text-gold focus:outline-none border-b border-gold/40" />
+                <button type="button" onclick="adjustGuests(1)" class="w-7 h-7 rounded-lg bg-surface-moss text-gold hover:bg-gold hover:text-surface-deep font-bold flex items-center justify-center transition-colors text-base" title="Increase guests">+</button>
+                <span class="text-xs text-ivory-stone">Patrons</span>
+              </div>
             </div>
-            <input type="range" id="guest-slider" min="4" max="60" value="15" step="1" oninput="updatePackageCalculation()" class="w-full accent-amber-400 cursor-pointer bg-surface-deep h-2 rounded-lg" />
+            <input type="range" id="guest-slider" min="2" max="60" value="15" step="1" oninput="onGuestSliderInput(this.value)" class="w-full accent-amber-400 cursor-pointer bg-surface-deep h-2.5 rounded-lg" />
             <div class="flex justify-between text-[10px] text-ivory-stone">
-              <span>Intimate (4 Patrons)</span>
+              <span>Intimate (2-5 Patrons)</span>
               <span>Lounge (25 Patrons)</span>
-              <span>Full Floor (60 Patrons)</span>
+              <span>Full Floor (60+ Patrons)</span>
             </div>
           </div>
 
@@ -832,7 +839,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               
               <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
-                <input type="checkbox" id addon-decor checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <input type="checkbox" id="addon-decor" checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
                 <div class="flex flex-col text-xs">
                   <span class="font-semibold text-ivory">Fairy Light &amp; Balloon Backdrop Arch</span>
                   <span class="text-ivory-stone text-[11px]">+ ₹1,200 (Custom Neon + Balloons)</span>
@@ -840,7 +847,7 @@
               </label>
 
               <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
-                <input type="checkbox" id addon-cake checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <input type="checkbox" id="addon-cake" checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
                 <div class="flex flex-col text-xs">
                   <span class="font-semibold text-ivory">Chef's Custom 2-Tier Chocolate Cake</span>
                   <span class="text-ivory-stone text-[11px]">+ ₹850 (Artisanal Belgian Truffle)</span>
@@ -848,7 +855,7 @@
               </label>
 
               <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
-                <input type="checkbox" id addon-dj onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <input type="checkbox" id="addon-dj" onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
                 <div class="flex flex-col text-xs">
                   <span class="font-semibold text-ivory">Private Audio DJ Sound Setup</span>
                   <span class="text-ivory-stone text-[11px]">+ ₹1,500 (Dedicated Sound Zone)</span>
@@ -856,7 +863,7 @@
               </label>
 
               <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-deep border border-gold/20 cursor-pointer hover:border-gold transition-colors">
-                <input type="checkbox" id addon-mocktails checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
+                <input type="checkbox" id="addon-mocktails" checked onchange="updatePackageCalculation()" class="accent-amber-400 w-4 h-4 rounded" />
                 <div class="flex flex-col text-xs">
                   <span class="font-semibold text-ivory">Unlimited Mocktail Tower Welcome</span>
                   <span class="text-ivory-stone text-[11px]">+ ₹150 per patron</span>
@@ -871,8 +878,8 @@
             <div class="flex flex-col text-center sm:text-left">
               <span class="text-[10px] uppercase font-bold tracking-widest text-gold">Estimated Party Package</span>
               <div class="flex items-baseline justify-center sm:justify-start gap-2">
-                <span id="calculated-total" class="font-serif text-3xl sm:text-4xl font-bold text-gold">₹8,800</span>
-                <span class="text-xs text-ivory-stone font-light">approx. catering + decor</span>
+                <span id="calculated-total" class="font-serif text-3xl sm:text-4xl font-bold text-gold">₹13,000</span>
+                <span id="calculation-breakdown" class="text-xs text-ivory-stone font-light">(15 patrons @ ₹580/person + add-ons)</span>
               </div>
             </div>
             <button onclick="sendPlanToWhatsApp()" class="btn-gold px-6 py-3 rounded-xl text-xs uppercase tracking-widest flex items-center gap-2 shadow-lg w-full sm:w-auto justify-center">
@@ -1449,6 +1456,8 @@
 
     // 5. Celebration Package Calculator
     let selectedOccasion = 'Birthday Bash';
+    const BASE_PER_PERSON_RATE = 580; // ₹580 per person
+
     function selectOccasion(type, btn) {
       selectedOccasion = type;
       document.querySelectorAll('.occasion-btn').forEach(b => {
@@ -1460,36 +1469,83 @@
       updatePackageCalculation();
     }
 
+    function onGuestSliderInput(val) {
+      const numInput = document.getElementById('guest-number-input');
+      if (numInput) numInput.value = val;
+      updatePackageCalculation();
+    }
+
+    function onGuestNumberInput(val) {
+      let num = parseInt(val, 10);
+      if (isNaN(num) || num < 1) num = 1;
+      const slider = document.getElementById('guest-slider');
+      if (slider) slider.value = Math.min(num, 60);
+      updatePackageCalculation();
+    }
+
+    function adjustGuests(delta) {
+      const numInput = document.getElementById('guest-number-input');
+      let current = parseInt(numInput ? numInput.value : 15, 10);
+      if (isNaN(current)) current = 15;
+      current = Math.max(1, current + delta);
+      if (numInput) numInput.value = current;
+      const slider = document.getElementById('guest-slider');
+      if (slider) slider.value = Math.min(current, 60);
+      updatePackageCalculation();
+    }
+
     function updatePackageCalculation() {
-      const guests = parseInt(document.getElementById('guest-slider').value);
-      document.getElementById('guest-count-display').textContent = `${guests} Guests`;
+      const numInput = document.getElementById('guest-number-input');
+      const slider = document.getElementById('guest-slider');
+      let guests = 15;
+      if (numInput && numInput.value !== '') {
+        guests = parseInt(numInput.value, 10);
+      } else if (slider) {
+        guests = parseInt(slider.value, 10);
+      }
+      if (isNaN(guests) || guests < 1) guests = 1;
 
-      const hasDecor = document.getElementById('addon-decor').checked;
-      const hasCake = document.getElementById('addon-cake').checked;
-      const hasDJ = document.getElementById('addon-dj').checked;
-      const hasMocktails = document.getElementById('addon-mocktails').checked;
+      const decorEl = document.getElementById('addon-decor');
+      const cakeEl = document.getElementById('addon-cake');
+      const djEl = document.getElementById('addon-dj');
+      const mocktailsEl = document.getElementById('addon-mocktails');
 
-      // Base catering estimate ~₹380 per head
-      let total = guests * 380;
-      if (hasDecor) total += 1200;
-      if (hasCake) total += 850;
-      if (hasDJ) total += 1500;
-      if (hasMocktails) total += (guests * 150);
+      const hasDecor = decorEl ? decorEl.checked : false;
+      const hasCake = cakeEl ? cakeEl.checked : false;
+      const hasDJ = djEl ? djEl.checked : false;
+      const hasMocktails = mocktailsEl ? mocktailsEl.checked : false;
 
-      document.getElementById('calculated-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+      // Base catering calculation: ₹580 per person
+      let cateringCost = guests * BASE_PER_PERSON_RATE;
+      let addonCost = 0;
+      if (hasDecor) addonCost += 1200;
+      if (hasCake) addonCost += 850;
+      if (hasDJ) addonCost += 1500;
+      if (hasMocktails) addonCost += (guests * 150);
+
+      const total = cateringCost + addonCost;
+
+      const totalEl = document.getElementById('calculated-total');
+      if (totalEl) totalEl.textContent = `₹${total.toLocaleString('en-IN')}`;
+
+      const breakdownEl = document.getElementById('calculation-breakdown');
+      if (breakdownEl) {
+        breakdownEl.textContent = `(${guests} patrons @ ₹580/person + add-ons)`;
+      }
     }
 
     function sendPlanToWhatsApp() {
-      const guests = document.getElementById('guest-slider').value;
-      const total = document.getElementById('calculated-total').textContent;
-      const hasDecor = document.getElementById('addon-decor').checked ? 'Yes' : 'No';
-      const hasCake = document.getElementById('addon-cake').checked ? 'Yes' : 'No';
-      const hasDJ = document.getElementById('addon-dj').checked ? 'Yes' : 'No';
-      const hasMocktails = document.getElementById('addon-mocktails').checked ? 'Yes' : 'No';
+      const numInput = document.getElementById('guest-number-input');
+      const guests = numInput ? numInput.value : (document.getElementById('guest-slider') ? document.getElementById('guest-slider').value : '15');
+      const total = document.getElementById('calculated-total') ? document.getElementById('calculated-total').textContent : '';
+      const hasDecor = (document.getElementById('addon-decor') && document.getElementById('addon-decor').checked) ? 'Yes' : 'No';
+      const hasCake = (document.getElementById('addon-cake') && document.getElementById('addon-cake').checked) ? 'Yes' : 'No';
+      const hasDJ = (document.getElementById('addon-dj') && document.getElementById('addon-dj').checked) ? 'Yes' : 'No';
+      const hasMocktails = (document.getElementById('addon-mocktails') && document.getElementById('addon-mocktails').checked) ? 'Yes' : 'No';
 
       const text = `🎉 *Down Town Cafe - Celebration Plan Request*
 Occasion: ${selectedOccasion}
-Guests: ${guests} Patrons
+Guests: ${guests} Patrons (@ ₹580/person)
 Balloon Arch & Decor: ${hasDecor}
 Artisanal Cake: ${hasCake}
 Sound & DJ Setup: ${hasDJ}
@@ -1500,6 +1556,9 @@ Kindly confirm availability and package details.`;
 
       window.open(`https://wa.me/919196363236?text=${encodeURIComponent(text)}`, '_blank');
     }
+
+    // Initialize package calculation on load
+    updatePackageCalculation();
 
     // 6. Reservation Form Handler
     const successModal = document.getElementById('success-modal');
